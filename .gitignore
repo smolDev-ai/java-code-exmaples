@@ -1,7 +1,9 @@
 .git/
 .DS_Store
 *.log
+*.idea
 
 *.class
 *.jar
 *.so
+*.iml
