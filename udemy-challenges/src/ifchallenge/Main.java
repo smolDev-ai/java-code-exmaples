@@ -26,6 +26,8 @@ public class Main
         levelCompleted = 8;
         bonus = 200;
 
+        finalScore = score;
+
         if(gameOver)
         {
             finalScore += (levelCompleted * bonus);
