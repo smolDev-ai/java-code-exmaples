@@ -8,6 +8,14 @@ public class WhileChallenge
            STEP 3: Use a while loop to test a range of numbers from 5 to 20, but printing out
            only the even numbers determined by the isEvenNumber method
 
+           *** Second part of the challenge ***
+
+           STEP 1: Add functionality for the while loop to keep
+           track of how many even and odd numbers it found
+           STEP 2: Once it finds 5 even numbers
+           exit the loop
+           STEP 3: display total number of odd and even numbers found
+
      */
 
     public static boolean isEvenNumber(int number)
@@ -17,15 +25,23 @@ public class WhileChallenge
 
     public static void main(String[] args)
     {
-        int range = 5;
-        while(range <= 20)
+        int range = 4;
+        int oddNums = 0;
+        int evenNums = 0;
+        while(evenNums == 5 || range <= 20)
         {
-            if(isEvenNumber(range))
+            range++;
+            if(!isEvenNumber(range))
             {
-                System.out.println(range + " is even");
+                oddNums++;
+                continue;
             }
 
-            range++;
+            evenNums++;
+            System.out.println(range + " is even");
         }
+
+        System.out.println("Total Even Numbers: " + evenNums);
+        System.out.println("Total Odd Numbers: " + oddNums);
     }
 }
