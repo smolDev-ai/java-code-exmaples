@@ -28,7 +28,7 @@ public class WhileChallenge
         int range = 4;
         int oddNums = 0;
         int evenNums = 0;
-        while(evenNums == 5 || range <= 20)
+        while(range <= 20)
         {
             range++;
             if(!isEvenNumber(range))
@@ -39,6 +39,10 @@ public class WhileChallenge
 
             evenNums++;
             System.out.println(range + " is even");
+            if(evenNums >= 5)
+            {
+                break;
+            }
         }
 
         System.out.println("Total Even Numbers: " + evenNums);
