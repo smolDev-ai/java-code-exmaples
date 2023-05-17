@@ -20,7 +20,13 @@ public class Main
             i++;
             System.out.print("Enter Number #" + i + ": ");
             String nextNumber = scanner.nextLine();
-            sum += Integer.parseInt(nextNumber);
+            try {
+                sum += Integer.parseInt(nextNumber);
+            } catch(NumberFormatException badData)
+            {
+                System.out.println("Invalid number");
+                i -= 1;
+            }
         }
 
         System.out.println(sum);
