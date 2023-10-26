@@ -18,6 +18,9 @@ public class Main
         System.out.println(mary.collectPay());
         System.out.println(mary.getDoublePay());
 
+        String variable = "variable";
+        System.out.printf("this string has a %d", variable);
+
 
     }
 }
